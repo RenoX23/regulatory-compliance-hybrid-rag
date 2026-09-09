@@ -5,9 +5,15 @@ SEBI Circulars, and Indian Statutory Financial Directives.
 """
 
 import json
+import sys
 import time
 from pathlib import Path
 from typing import Optional
+
+# Ensure repository root is always in sys.path (critical for Streamlit Cloud)
+ROOT_DIR = Path(__file__).resolve().parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
 
 import streamlit as st
 
@@ -16,6 +22,8 @@ from src.generation.llm import (
     DeterministicComplianceGenerator,
     GeminiLLMGenerator,
     GroqLLMGenerator,
+    GeminiGenerator,
+    GroqGenerator,
     get_llm_generator,
 )
 from src.generation.pipeline import RegulatoryRAGPipeline
@@ -251,8 +259,18 @@ with tab_query:
             pipeline.generator = DeterministicComplianceGenerator()
         elif llm_choice == "Gemini 2.5 Flash":
             pipeline.generator = GeminiLLMGenerator()
+            try:
+                pipeline.generator = GeminiGenerator()
+            except Exception as e:
+                st.warning(f"Could not initialize Gemini ({e}). Falling back to Deterministic Compliance Generator.")
+                pipeline.generator = DeterministicComplianceGenerator()
         elif llm_choice == "Groq LLaMA-3.3-70B":
             pipeline.generator = GroqLLMGenerator()
+            try:
+                pipeline.generator = GroqGenerator()
+            except Exception as e:
+                st.warning(f"Could not initialize Groq ({e}). Falling back to Deterministic Compliance Generator.")
+                pipeline.generator = DeterministicComplianceGenerator()
 
         req = QueryRequest(
             query=user_query,

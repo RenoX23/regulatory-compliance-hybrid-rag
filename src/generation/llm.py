@@ -138,3 +138,8 @@ def get_llm_generator() -> BaseLLMGenerator:
     # Fallback to deterministic local generator
     console.print("[cyan]Using DeterministicComplianceGenerator (Local zero-cost / offline mode).[/cyan]")
     return DeterministicComplianceGenerator()
+
+
+# Compatibility aliases
+GeminiLLMGenerator = GeminiGenerator
+GroqLLMGenerator = GroqGenerator
