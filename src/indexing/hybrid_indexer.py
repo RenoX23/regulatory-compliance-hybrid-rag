@@ -29,6 +29,14 @@ class HybridIndexer:
         self.sparse_index = sparse_index or BM25Index()
         self.corpus_builder = corpus_builder or CorpusBuilder()
         self.chunks: List[DocumentChunk] = []
+        self._ensure_initialized()
+
+    def _ensure_initialized(self) -> None:
+        """Ensure both dense and sparse indices are ready for querying."""
+        if self.sparse_index.bm25 is None:
+            loaded = self.sparse_index.load()
+            if not loaded or self.dense_index.count() == 0:
+                self.index_all()
 
     def index_all(self, force_reindex: bool = False) -> Dict[str, Any]:
         """Perform end-to-end ingestion and dual-indexing of the regulatory corpus."""

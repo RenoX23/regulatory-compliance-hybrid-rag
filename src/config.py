@@ -57,7 +57,7 @@ class Settings(BaseSettings):
     RETRIEVAL_SPARSE_TOP_K: int = 20
     RRF_K: int = 60
     RERANK_TOP_N: int = 3
-    MIN_CONFIDENCE_THRESHOLD: float = 0.30
+    MIN_CONFIDENCE_THRESHOLD: float = 0.55
 
     # Server Settings
     APP_HOST: str = "0.0.0.0"

@@ -1,4 +1,4 @@
-"""Official corpus data definitions for RBI, SEBI, and Statutory compliance texts."""
+﻿"""Official corpus data definitions for RBI, SEBI, and Statutory compliance texts."""
 
 from typing import Any, Dict, List
 
@@ -6,7 +6,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
     {
         "doc_id": "rbi-nbfc-sbr-2023",
         "regulator": "RBI",
-        "title": "Master Direction – Reserve Bank of India (Non-Banking Financial Company – Scale Based Regulation) Directions, 2023",
+        "title": "Master Direction â€“ Reserve Bank of India (Non-Banking Financial Company â€“ Scale Based Regulation) Directions, 2023",
         "circular_number": "RBI/2023-24/102 DOR.FIN.HREC.No.45/03.10.119/2023-24",
         "issue_date": "2023-10-19",
         "subject": "Regulatory Framework for NBFCs under Scale Based Regulation (Base, Middle, Upper, and Top Layers)",
@@ -18,7 +18,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
                     {
                         "clause_number": "Clause 3.1",
                         "clause_title": "Certificate of Registration Mandatory Requirement",
-                        "text": "In terms of Section 45-IA of the Reserve Bank of India Act, 1934, no non-banking financial company shall commence or carry on the business of a non-banking financial institution without obtaining a certificate of registration (CoR) issued by the Reserve Bank and having a Net Owned Fund (NOF) of not less than ten crore rupees (₹10 crore). Existing NBFCs-ICC, NBFC-MFI, and IDF-NBFC with NOF below ₹10 crore shall achieve ₹10 crore by March 31, 2027 in a phased trajectory."
+                        "text": "In terms of Section 45-IA of the Reserve Bank of India Act, 1934, no non-banking financial company shall commence or carry on the business of a non-banking financial institution without obtaining a certificate of registration (CoR) issued by the Reserve Bank and having a Net Owned Fund (NOF) of not less than ten crore rupees (â‚¹10 crore). Existing NBFCs-ICC, NBFC-MFI, and IDF-NBFC with NOF below â‚¹10 crore shall achieve â‚¹10 crore by March 31, 2027 in a phased trajectory."
                     },
                     {
                         "clause_number": "Clause 3.2",
@@ -48,7 +48,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
     {
         "doc_id": "rbi-kyc-direction-2016",
         "regulator": "RBI",
-        "title": "Master Direction – Know Your Customer (KYC) Direction, 2016 (Updated 2024)",
+        "title": "Master Direction â€“ Know Your Customer (KYC) Direction, 2016 (Updated 2024)",
         "circular_number": "RBI/DBR/2015-16/18 Master Direction DBR.AML.BC.No.81/14.01.001/2015-16",
         "issue_date": "2016-02-25",
         "subject": "Customer Acceptance Policy, Customer Identification Procedures, and Monitoring of Transactions",
@@ -158,7 +158,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
     {
         "doc_id": "rbi-credit-card-directions-2022",
         "regulator": "RBI",
-        "title": "Master Direction – Credit Card and Debit Card – Issuance and Conduct Directions, 2022",
+        "title": "Master Direction â€“ Credit Card and Debit Card â€“ Issuance and Conduct Directions, 2022",
         "circular_number": "RBI/2022-23/92 DoR.AUT.REC.No.27/24.01.041/2022-23",
         "issue_date": "2022-04-21",
         "subject": "Customer Protection, Billing Cycle Choice, Unsolicited Cards Penalties, and Account Closure",
@@ -180,7 +180,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
                     {
                         "clause_number": "Clause 10(f)",
                         "clause_title": "Seven-Day Mandatory Closure Rule",
-                        "text": "Any request for closure of a credit card shall be honoured within seven (7) working days by the card-issuer, subject to payment of all outstanding dues. Failure to close the card within 7 working days shall render the card-issuer liable to pay a penalty of ₹500 per day of delay to the customer until the card is closed, provided there are no unpaid dues."
+                        "text": "Any request for closure of a credit card shall be honoured within seven (7) working days by the card-issuer, subject to payment of all outstanding dues. Failure to close the card within 7 working days shall render the card-issuer liable to pay a penalty of â‚¹500 per day of delay to the customer until the card is closed, provided there are no unpaid dues."
                     }
                 ]
             }
@@ -220,7 +220,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
     {
         "doc_id": "rbi-irac-norms-2021",
         "regulator": "RBI",
-        "title": "Master Circular – Prudential Norms on Income Recognition, Asset Classification and Provisioning pertaining to Advances (IRAC)",
+        "title": "Master Circular â€“ Prudential Norms on Income Recognition, Asset Classification and Provisioning pertaining to Advances (IRAC)",
         "circular_number": "RBI/2021-22/104 DOR.STR.REC.68/21.04.048/2021-22",
         "issue_date": "2021-10-01",
         "subject": "Classification of NPAs, Special Mention Accounts (SMA), and Provisioning Rates",
@@ -263,7 +263,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
                     {
                         "clause_number": "Clause 4.1",
                         "clause_title": "Comprehensive Policy Framework",
-                        "text": "Regulated Entities shall put in place Board-approved policies for undertaking compromise settlements and technical write-offs. The policy shall delineate delegation of powers, prudential floor on sacrifice, methodology for valuation of security, and permissible concessions. Settlements involving concessions above ₹50 lakh shall be approved by an executive committee headed by the Managing Director or equivalent."
+                        "text": "Regulated Entities shall put in place Board-approved policies for undertaking compromise settlements and technical write-offs. The policy shall delineate delegation of powers, prudential floor on sacrifice, methodology for valuation of security, and permissible concessions. Settlements involving concessions above â‚¹50 lakh shall be approved by an executive committee headed by the Managing Director or equivalent."
                     },
                     {
                         "clause_number": "Clause 6.2",
@@ -277,7 +277,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
     {
         "doc_id": "rbi-outsourcing-directions-2023",
         "regulator": "RBI",
-        "title": "Master Direction – Reserve Bank of India (Outsourcing of Financial Services) Directions",
+        "title": "Master Direction â€“ Reserve Bank of India (Outsourcing of Financial Services) Directions",
         "circular_number": "RBI/2023-24/108 DOR.ORG.REC.65/21.04.158/2023-24",
         "issue_date": "2023-11-15",
         "subject": "Core Management Functions Non-Delegable, Risk Assessment, and Vendor Audit Rights",
@@ -303,7 +303,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
     {
         "doc_id": "rbi-fair-practices-nbfc-2023",
         "regulator": "RBI",
-        "title": "Master Direction – Fair Practices Code for Non-Banking Financial Companies",
+        "title": "Master Direction â€“ Fair Practices Code for Non-Banking Financial Companies",
         "circular_number": "RBI/2023-24/53 DOR.FIN.REC.No.29/03.10.119/2023-24",
         "issue_date": "2023-07-21",
         "subject": "Loan Sanction Disclosures, Vernacular Language Terms, and Grievance Redressal Officer",
@@ -329,7 +329,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
     {
         "doc_id": "rbi-psl-directions-2020",
         "regulator": "RBI",
-        "title": "Master Directions – Priority Sector Lending (PSL) – Targets and Classification",
+        "title": "Master Directions â€“ Priority Sector Lending (PSL) â€“ Targets and Classification",
         "circular_number": "RBI/FIDD/2020-2021/72 FIDD.CO.Plan.BC.5/04.09.01/2020-2021",
         "issue_date": "2020-09-04",
         "subject": "Mandatory Lending Targets for Agriculture, Micro-Enterprises, and Weaker Sections",
@@ -355,7 +355,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
     {
         "doc_id": "rbi-customer-service-banks-2022",
         "regulator": "RBI",
-        "title": "Master Circular – Customer Service in Banks",
+        "title": "Master Circular â€“ Customer Service in Banks",
         "circular_number": "RBI/2022-23/15 DOR.CRE.REC.No.07/21.01.001/2022-23",
         "issue_date": "2022-04-01",
         "subject": "Deceased Depositors Settlement, Doorstep Banking, and Locker Allocation",
@@ -488,7 +488,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
                     {
                         "clause_number": "Clause 10.1",
                         "clause_title": "TER Limits for Equity and Debt Schemes",
-                        "text": "The maximum permissible Total Expense Ratio (TER) on daily net assets for open-ended equity-oriented schemes shall be: 2.25% on the first ₹500 crore of daily net assets, reducing to 2.00% on the next ₹250 crore, 1.75% on the next ₹1,250 crore, 1.60% on the next ₹3,000 crore, 1.50% on the next ₹5,000 crore, and decreasing further as AUM expands. All fees and expenses charged to the scheme under any head must be contained within the permissible TER."
+                        "text": "The maximum permissible Total Expense Ratio (TER) on daily net assets for open-ended equity-oriented schemes shall be: 2.25% on the first â‚¹500 crore of daily net assets, reducing to 2.00% on the next â‚¹250 crore, 1.75% on the next â‚¹1,250 crore, 1.60% on the next â‚¹3,000 crore, 1.50% on the next â‚¹5,000 crore, and decreasing further as AUM expands. All fees and expenses charged to the scheme under any head must be contained within the permissible TER."
                     },
                     {
                         "clause_number": "Clause 10.4",
@@ -580,7 +580,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
     {
         "doc_id": "sebi-fit-proper-intermediaries-2008",
         "regulator": "SEBI",
-        "title": "SEBI (Intermediaries) Regulations, 2008 – Criteria for Fit and Proper Person",
+        "title": "SEBI (Intermediaries) Regulations, 2008 â€“ Criteria for Fit and Proper Person",
         "circular_number": "SEBI/LAD-NRO/GN/2008/11/126538 Schedule II",
         "issue_date": "2008-05-26",
         "subject": "Integrity, Solvency, Disqualification Conditions for Market Intermediaries",
@@ -659,7 +659,7 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
                     {
                         "clause_number": "Section 12(1)(b)",
                         "clause_title": "Cash Transaction Reports (CTR) Threshold",
-                        "text": "Reporting entities shall furnish to the Director, Financial Intelligence Unit - India (FIU-IND) information relating to all cash transactions of the value of more than rupees ten lakh (₹10,00,000) or its equivalent in foreign currency, or a series of cash transactions integrally connected to each other which have taken place within a month where the aggregate value exceeds rupees ten lakh."
+                        "text": "Reporting entities shall furnish to the Director, Financial Intelligence Unit - India (FIU-IND) information relating to all cash transactions of the value of more than rupees ten lakh (â‚¹10,00,000) or its equivalent in foreign currency, or a series of cash transactions integrally connected to each other which have taken place within a month where the aggregate value exceeds rupees ten lakh."
                     },
                     {
                         "clause_number": "Rule 7(2)",
@@ -671,3 +671,4 @@ REGULATORY_DOCUMENTS: List[Dict[str, Any]] = [
         ]
     }
 ]
+
