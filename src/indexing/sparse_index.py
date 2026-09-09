@@ -63,6 +63,10 @@ class BM25Index:
         self.bm25 = BM25Okapi(tokenized_corpus)
         console.print("[green]BM25 sparse index built successfully.[/green]")
 
+    def count(self) -> int:
+        """Return number of indexed chunks."""
+        return len(self.chunks)
+
     def query(self, query_text: str, top_k: int = 20) -> List[RetrievalResult]:
         """Search BM25 index and return scored RetrievalResult list."""
         if self.bm25 is None or not self.chunks:
