@@ -230,7 +230,7 @@ tab_query, tab_benchmark, tab_corpus, tab_architecture = st.tabs([
     "🔍 Compliance Audit Query",
     "📊 Ragas Benchmark Metrics",
     "🏛️ Indexed Regulatory Corpus",
-    "🛡️ System Architecture & Defenses",
+    "⚙️ System Architecture & Design",
 ])
 
 # Initialize session state query if empty
@@ -322,11 +322,14 @@ with tab_query:
             st.markdown("#### 📜 Verified Regulatory Citations & Statutory Grounds")
             cites_html = ""
             for c in response.citations:
-                reg_class = f"badge-regulator-{c.regulator.lower()}"
+                cite_text = str(c).strip("[]")
+                lower_text = cite_text.lower()
+                reg_label = "RBI" if "rbi" in lower_text else ("SEBI" if "sebi" in lower_text else "STATUTORY")
+                reg_class = f"badge-regulator-{reg_label.lower()}"
                 cites_html += (
                     f'<span class="badge-citation">'
-                    f'<span class="{reg_class}">[{c.regulator}]</span> '
-                    f'<b>{c.document_id}</b> | {c.section} | Page {c.page_number}'
+                    f'<span class="{reg_class}">[{reg_label}]</span> '
+                    f'<b>{cite_text}</b>'
                     f'</span> '
                 )
             st.markdown(cites_html, unsafe_allow_html=True)
@@ -344,11 +347,14 @@ with tab_query:
         st.markdown("#### 🔍 Retrieved Regulatory Passages & Cross-Attention Scores")
         if response.retrieved_chunks:
             for idx, chunk in enumerate(response.retrieved_chunks, start=1):
-                reg_badge = f'<span class="badge-regulator-{chunk.metadata.regulator.lower()}">{chunk.metadata.regulator}</span>'
+                reg_name = str(chunk.metadata.regulator.value if hasattr(chunk.metadata.regulator, 'value') else chunk.metadata.regulator)
+                sec_str = getattr(chunk.metadata, 'section_number', 'N/A')
+                circ_str = getattr(chunk.metadata, 'circular_number', getattr(chunk.metadata, 'doc_id', 'N/A'))
+                clause_str = getattr(chunk.metadata, 'clause_number', '') or 'N/A'
                 with st.expander(
-                    f"Chunk #{idx} | Score: {chunk.score:.4f} | [{chunk.metadata.regulator}] {chunk.metadata.title} ({chunk.metadata.section})"
+                    f"Passage #{idx} | Score: {chunk.score:.4f} | [{reg_name}] {chunk.metadata.title} ({sec_str})"
                 ):
-                    st.markdown(f"**Circular ID**: `{chunk.metadata.circular_id}` | **Section**: `{chunk.metadata.section}` | **Clause**: `{chunk.metadata.clause or 'N/A'}` | **Page**: `{chunk.metadata.page_number}`")
+                    st.markdown(f"**Circular ID**: `{circ_str}` | **Section**: `{sec_str}` | **Clause**: `{clause_str}` | **Page**: `{chunk.metadata.page_number}`")
                     st.markdown(
                         f"""```text
 {chunk.content}
@@ -444,27 +450,23 @@ with tab_corpus:
         st.info("Corpus manifest not found. Run `python -m src.run_indexing` to build the corpus.")
 
 with tab_architecture:
-    st.markdown("### 🛡️ Production Architecture & Auditor Defenses")
+    st.markdown("### 🛡️ Production Architecture & Core Design Decisions")
 
     st.markdown(
         """
-        #### 1. Memorize-Cold Interview Defenses
+        #### 1. Dual Retrieval: Mitigating Dense Embedding Collapse on Alphanumeric Codes
+        Dense vector models project text into a continuous semantic manifold ($d=384$). While exceptional for semantic similarity (e.g. *"what are capital requirements?"*), they exhibit severe token fragmentation and loss on exact alphanumeric statutory identifiers (*Section 45-IA*, *RBI/2023-24/102*, *Rule 7(2)*). A dedicated **BM25Okapi** sparse inverted index preserves exact statutory tokens and assigns maximal Inverse Document Frequency (IDF) weight to rare regulatory references, eliminating false negatives.
 
-        * **Why Hybrid over Pure Dense Retrieval?**
-          > Dense vector models compress semantic intent into fixed-dimensional vectors ($d=384$). While exceptional for semantic similarity ("what are capital requirements?"), they exhibit severe token collision and vocabulary collapse on exact alphanumeric statutory identifiers (*Section 45-IA*, *RBI/2023-24/102*, *Clause 10(f)*). BM25 sparse keyword inverted index guarantees that rare statutory tokens receive maximal IDF weighting and surface immediately.
+        #### 2. Reciprocal Rank Fusion (RRF): Scale-Free Rank Aggregation
+        Cosine distances ($[-1, 1]$) and BM25 scores ($[0, \infty)$) exist on disparate, non-standardized mathematical distributions. Linear score interpolation ($\alpha S_{dense} + (1-\alpha) S_{sparse}$) requires continuous parameter tuning and fails across variable query lengths. RRF ($k=60$) operates purely on discrete ordinal rank positions:
+        $$\\text{RRF Score}(d) = \\sum_{m \\in \\{\\text{dense}, \\text{sparse}\\}} \\frac{1}{k + r_m(d)}$$
+        ensuring equitable candidate blending without score calibration instability.
 
-        * **Why Reciprocal Rank Fusion (RRF) over Linear Score Interpolation?**
-          > Cosine distances ($[-1, 1]$ or $[0, 2]$) and BM25 scores ($[0, \infty)$) exist on disparate, uncalibrated mathematical manifolds. Normalizing them requires query-dependent temperature tuning. RRF ($k=60$) operates purely on discrete ordinal rank positions:
-          $$\\text{RRF Score}(d) = \\sum_{m \\in \\{\\text{dense}, \\text{sparse}\\}} \\frac{1}{k + r_m(d)}$$
-          eliminating score calibration instability.
+        #### 3. Cross-Encoder Attention Reranking
+        Bi-encoders project queries and passages independently into single vectors ($O(N)$ dot products), missing token-level conditional interactions. The Cross-Encoder (`BAAI/bge-reranker-base`) computes **all-to-all cross-attention** across concatenated query and candidate tokens ($O(N \\times L^2)$), resolving statutory exceptions, monetary thresholds, and conditional clauses.
 
-        * **Why Cross-Encoder Reranking?**
-          > Bi-encoders project query and passages independently into vector space ($O(N)$ dot products). The Cross-Encoder (`BAAI/bge-reranker-base`) computes **all-to-all cross-attention** between query and candidate tokens simultaneously ($O(N \\times L^2)$), resolving statutory negation, exceptions, conditional dependencies, and clause-level nuances that bi-encoders miss.
-
-        #### 2. Google XYZ Resume Bullets
-
-        1. **Architected a production Hybrid RAG system** over 500+ pages of RBI and SEBI financial regulations, combining ChromaDB dense embeddings with BM25 sparse retrieval to eliminate exact-code retrieval failures.
-        2. **Integrated a cross-encoder reranking layer (BGE)** with Reciprocal Rank Fusion, improving context retrieval precision by **+38.5% on exact statutory codes** while maintaining sub-400ms reranking latency.
-        3. **Benchmarked pipeline reliability using the Ragas evaluation framework** across 105 compliance audit queries, achieving **96.6% Faithfulness** and deploying a live verification UI to Hugging Face Spaces.
+        #### 4. Grounding Verification & Hallucination Prevention
+        - **Calibrated Score Thresholding**: Cross-encoder scores undergo sigmoid calibration. Any query scoring below `MIN_CONFIDENCE_THRESHOLD = 0.55` is automatically refused.
+        - **Citation Validation**: Post-generation regex validation extracts cited provisions and verifies their occurrence in the retrieved context metadata before serving the determination.
         """
     )
