@@ -4,9 +4,9 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![RAG Architecture](https://img.shields.io/badge/RAG-Hybrid_RRF_%2B_Cross--Encoder-orange.svg)]()
 
-> **Domain**: Financial Technology / Regulatory Compliance & Audit Intelligence  
-> **Target Role**: AI/ML Engineer / LLM Engineer / Applied Data Scientist  
-> **Core Tech Stack**: Python, ChromaDB, rank-bm25, Cross-Encoder (BAAI/bge-reranker-base), Gemini 1.5 Flash / Groq LLaMA 3.3, Ragas, FastAPI, Streamlit, Hugging Face Spaces  
+> **Domain**: Financial Technology / Regulatory Compliance & Audit Intelligence
+> **Target Role**: AI/ML Engineer / LLM Engineer / Applied Data Scientist
+> **Core Tech Stack**: Python, ChromaDB, rank-bm25, Cross-Encoder (BAAI/bge-reranker-base), Gemini 1.5 Flash / Groq LLaMA 3.3, Ragas, FastAPI, Streamlit, Hugging Face Spaces
 
 ---
 
