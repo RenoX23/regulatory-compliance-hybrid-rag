@@ -1,0 +1,200 @@
+[
+  {
+    "doc_id": "rbi-nbfc-sbr-2023",
+    "regulator": "RBI",
+    "title": "Master Direction \u2013 Reserve Bank of India (Non-Banking Financial Company \u2013 Scale Based Regulation) Directions, 2023",
+    "circular_number": "RBI/2023-24/102 DOR.FIN.HREC.No.45/03.10.119/2023-24",
+    "issue_date": "2023-10-19",
+    "subject": "Regulatory Framework for NBFCs under Scale Based Regulation (Base, Middle, Upper, and Top Layers)",
+    "filename": "rbi-nbfc-sbr-2023.pdf"
+  },
+  {
+    "doc_id": "rbi-kyc-direction-2016",
+    "regulator": "RBI",
+    "title": "Master Direction \u2013 Know Your Customer (KYC) Direction, 2016 (Updated 2024)",
+    "circular_number": "RBI/DBR/2015-16/18 Master Direction DBR.AML.BC.No.81/14.01.001/2015-16",
+    "issue_date": "2016-02-25",
+    "subject": "Customer Acceptance Policy, Customer Identification Procedures, and Monitoring of Transactions",
+    "filename": "rbi-kyc-direction-2016.pdf"
+  },
+  {
+    "doc_id": "rbi-digital-lending-2022",
+    "regulator": "RBI",
+    "title": "Guidelines on Digital Lending (Master Direction)",
+    "circular_number": "RBI/2022-23/111 DOR.CRE.REC.66/21.07.001/2022-23",
+    "issue_date": "2022-09-02",
+    "subject": "Direct Disbursal, Key Fact Statement, Cooling-Off Period, and LSP Data Privacy Governance",
+    "filename": "rbi-digital-lending-2022.pdf"
+  },
+  {
+    "doc_id": "rbi-dlg-digital-lending-2023",
+    "regulator": "RBI",
+    "title": "Guidelines on Default Loss Guarantee (DLG) in Digital Lending",
+    "circular_number": "RBI/2023-24/41 DOR.CRE.REC.21/21.07.001/2023-24",
+    "issue_date": "2023-06-08",
+    "subject": "First Loss Default Guarantee (FLDG) Structures, Portfolio Caps, and Capital Requirements",
+    "filename": "rbi-dlg-digital-lending-2023.pdf"
+  },
+  {
+    "doc_id": "rbi-credit-card-directions-2022",
+    "regulator": "RBI",
+    "title": "Master Direction \u2013 Credit Card and Debit Card \u2013 Issuance and Conduct Directions, 2022",
+    "circular_number": "RBI/2022-23/92 DoR.AUT.REC.No.27/24.01.041/2022-23",
+    "issue_date": "2022-04-21",
+    "subject": "Customer Protection, Billing Cycle Choice, Unsolicited Cards Penalties, and Account Closure",
+    "filename": "rbi-credit-card-directions-2022.pdf"
+  },
+  {
+    "doc_id": "rbi-it-governance-2023",
+    "regulator": "RBI",
+    "title": "Master Direction on Information Technology Governance, Risk, Controls and Regulatory Reporting, 2023",
+    "circular_number": "RBI/2023-24/107 DoS.CO.CSITE.SEC.No.3/31.01.015/2023-24",
+    "issue_date": "2023-11-07",
+    "subject": "IT Committee, CISO Independence, Cyber Incident Escalation within 6 Hours, and DR Drills",
+    "filename": "rbi-it-governance-2023.pdf"
+  },
+  {
+    "doc_id": "rbi-irac-norms-2021",
+    "regulator": "RBI",
+    "title": "Master Circular \u2013 Prudential Norms on Income Recognition, Asset Classification and Provisioning pertaining to Advances (IRAC)",
+    "circular_number": "RBI/2021-22/104 DOR.STR.REC.68/21.04.048/2021-22",
+    "issue_date": "2021-10-01",
+    "subject": "Classification of NPAs, Special Mention Accounts (SMA), and Provisioning Rates",
+    "filename": "rbi-irac-norms-2021.pdf"
+  },
+  {
+    "doc_id": "rbi-compromise-settlements-2023",
+    "regulator": "RBI",
+    "title": "Framework for Compromise Settlements and Technical Write-offs",
+    "circular_number": "RBI/2023-24/40 DOR.STR.REC.20/21.04.048/2023-24",
+    "issue_date": "2023-06-08",
+    "subject": "Board Approved Policy for Compromise Settlements, Wilful Defaulters, and Mandatory Cooling Period",
+    "filename": "rbi-compromise-settlements-2023.pdf"
+  },
+  {
+    "doc_id": "rbi-outsourcing-directions-2023",
+    "regulator": "RBI",
+    "title": "Master Direction \u2013 Reserve Bank of India (Outsourcing of Financial Services) Directions",
+    "circular_number": "RBI/2023-24/108 DOR.ORG.REC.65/21.04.158/2023-24",
+    "issue_date": "2023-11-15",
+    "subject": "Core Management Functions Non-Delegable, Risk Assessment, and Vendor Audit Rights",
+    "filename": "rbi-outsourcing-directions-2023.pdf"
+  },
+  {
+    "doc_id": "rbi-fair-practices-nbfc-2023",
+    "regulator": "RBI",
+    "title": "Master Direction \u2013 Fair Practices Code for Non-Banking Financial Companies",
+    "circular_number": "RBI/2023-24/53 DOR.FIN.REC.No.29/03.10.119/2023-24",
+    "issue_date": "2023-07-21",
+    "subject": "Loan Sanction Disclosures, Vernacular Language Terms, and Grievance Redressal Officer",
+    "filename": "rbi-fair-practices-nbfc-2023.pdf"
+  },
+  {
+    "doc_id": "rbi-psl-directions-2020",
+    "regulator": "RBI",
+    "title": "Master Directions \u2013 Priority Sector Lending (PSL) \u2013 Targets and Classification",
+    "circular_number": "RBI/FIDD/2020-2021/72 FIDD.CO.Plan.BC.5/04.09.01/2020-2021",
+    "issue_date": "2020-09-04",
+    "subject": "Mandatory Lending Targets for Agriculture, Micro-Enterprises, and Weaker Sections",
+    "filename": "rbi-psl-directions-2020.pdf"
+  },
+  {
+    "doc_id": "rbi-customer-service-banks-2022",
+    "regulator": "RBI",
+    "title": "Master Circular \u2013 Customer Service in Banks",
+    "circular_number": "RBI/2022-23/15 DOR.CRE.REC.No.07/21.01.001/2022-23",
+    "issue_date": "2022-04-01",
+    "subject": "Deceased Depositors Settlement, Doorstep Banking, and Locker Allocation",
+    "filename": "rbi-customer-service-banks-2022.pdf"
+  },
+  {
+    "doc_id": "sebi-lodr-regulations-2015",
+    "regulator": "SEBI",
+    "title": "Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "circular_number": "SEBI/LAD-NRO/GN/2015-16/013 No. SEBI/LAD-NRO/GN/2015-16/013",
+    "issue_date": "2015-09-02",
+    "subject": "Regulation 30 Material Disclosures, Regulation 17 Board Composition, and Regulation 18 Audit Committee",
+    "filename": "sebi-lodr-regulations-2015.pdf"
+  },
+  {
+    "doc_id": "sebi-pit-regulations-2015",
+    "regulator": "SEBI",
+    "title": "Securities and Exchange Board of India (Prohibition of Insider Trading) Regulations, 2015",
+    "circular_number": "SEBI/LAD-NRO/GN/2014-15/21/85",
+    "issue_date": "2015-01-15",
+    "subject": "UPSI Handling, Structured Digital Database (SDD), and Trading Window Restrictions",
+    "filename": "sebi-pit-regulations-2015.pdf"
+  },
+  {
+    "doc_id": "sebi-cybersecurity-brokers-2023",
+    "regulator": "SEBI",
+    "title": "Cybersecurity and Cyber Resilience Framework for Stock Brokers & Depository Participants",
+    "circular_number": "SEBI/HO/MIRSD/CIR/P/2023/112",
+    "issue_date": "2023-07-06",
+    "subject": "SOC Operations, Half-Yearly VAPT, Cyber Audit, and Critical Incident Escalation",
+    "filename": "sebi-cybersecurity-brokers-2023.pdf"
+  },
+  {
+    "doc_id": "sebi-mutual-funds-master-2019",
+    "regulator": "SEBI",
+    "title": "Master Circular for Mutual Funds",
+    "circular_number": "SEBI/HO/IMD/DF2/CIR/P/2019/17",
+    "issue_date": "2019-06-05",
+    "subject": "Total Expense Ratio (TER) Limits, Scheme Categorization, and Risk-o-meter",
+    "filename": "sebi-mutual-funds-master-2019.pdf"
+  },
+  {
+    "doc_id": "sebi-obpp-framework-2023",
+    "regulator": "SEBI",
+    "title": "Framework for Online Bond Platform Providers (OBPPs)",
+    "circular_number": "SEBI/HO/DDHS/DDHS-PoD-1/P/2023/114",
+    "issue_date": "2023-07-21",
+    "subject": "Registration as Stock Broker in Debt Segment, Permissible Securities, and Settlement Mechanism",
+    "filename": "sebi-obpp-framework-2023.pdf"
+  },
+  {
+    "doc_id": "sebi-esg-rating-providers-2023",
+    "regulator": "SEBI",
+    "title": "Regulatory Framework for ESG Rating Providers (ERPs)",
+    "circular_number": "SEBI/HO/DDHS/DDHS-RACPOD/P/CIR/2023/121",
+    "issue_date": "2023-07-12",
+    "subject": "Registration of ERPs, Transparency in Rating Methodologies, and BRSR Core Assurance",
+    "filename": "sebi-esg-rating-providers-2023.pdf"
+  },
+  {
+    "doc_id": "sebi-surveillance-market-2022",
+    "regulator": "SEBI",
+    "title": "Surveillance of Securities Market & Trade Execution Directives",
+    "circular_number": "SEBI/HO/ISD/ISD-SEC-4/P/CIR/2022/107",
+    "issue_date": "2022-08-08",
+    "subject": "Trade Surveillance Alerts, Suspicious Activity Escalation, and Pump-and-Dump Prevention",
+    "filename": "sebi-surveillance-market-2022.pdf"
+  },
+  {
+    "doc_id": "sebi-fit-proper-intermediaries-2008",
+    "regulator": "SEBI",
+    "title": "SEBI (Intermediaries) Regulations, 2008 \u2013 Criteria for Fit and Proper Person",
+    "circular_number": "SEBI/LAD-NRO/GN/2008/11/126538 Schedule II",
+    "issue_date": "2008-05-26",
+    "subject": "Integrity, Solvency, Disqualification Conditions for Market Intermediaries",
+    "filename": "sebi-fit-proper-intermediaries-2008.pdf"
+  },
+  {
+    "doc_id": "statutory-ni-act-sec-138",
+    "regulator": "STATUTORY",
+    "title": "Section 138 of the Negotiable Instruments Act, 1881",
+    "circular_number": "Act No. 26 of 1881 - Section 138",
+    "issue_date": "1881-12-09",
+    "subject": "Dishonour of Cheque for Insufficiency of Funds, Statutory Demand Notice, and Criminal Liability",
+    "filename": "statutory-ni-act-sec-138.pdf"
+  },
+  {
+    "doc_id": "statutory-pmla-fiu-2002",
+    "regulator": "STATUTORY",
+    "title": "Prevention of Money Laundering Act, 2002 (PMLA) & FIU-IND Reporting Directives",
+    "circular_number": "Act No. 15 of 2003 - Section 12 / FIU-IND Reporting Rules",
+    "issue_date": "2003-01-17",
+    "subject": "Maintenance of Transaction Records, CTR Thresholds, and Suspicious Transaction Reporting (STR)",
+    "filename": "statutory-pmla-fiu-2002.pdf"
+  }
+]
