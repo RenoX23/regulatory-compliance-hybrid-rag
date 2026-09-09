@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "regulatory-compliance-hybrid-rag"
+version = "0.1.0"
+description = "Enterprise-grade Hybrid RAG system for Financial & Regulatory Compliance (RBI/SEBI)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "RenoX23", email = "whitewolf9181@gmail.com" }
+]
+dependencies = [
+    "pydantic>=2.4.0",
+    "pydantic-settings>=2.0.0",
+    "pymupdf>=1.24.0",
+    "chromadb>=0.5.0",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=3.0.0",
+    "transformers>=4.40.0",
+    "torch>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "streamlit>=1.35.0",
+    "requests>=2.31.0",
+    "tqdm>=4.66.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.4.0",
+    "mypy>=1.9.0",
+]
+eval = [
+    "ragas>=0.1.0",
+    "datasets>=2.18.0",
+    "langchain>=0.2.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
